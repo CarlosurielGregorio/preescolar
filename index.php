@@ -2,7 +2,7 @@
 
 define ('DS', DIRECTORY_SEPARATOR);
 define('ROOT', realpath(dirname(__FILE__)) . DS);
-define('URL', 'http://localhost/Fichas/');
+define('URL', 'http://localhost/preescolar/');
 
 require_once 'config/config.php';
 require_once 'model/Conexion.php';

@@ -4,69 +4,38 @@ if(isset($_SESSION['loggedin']) == true){
 exit();
 }else{
 ?>
-<div class="container-sm">
-    <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
-
-            <div class="row mb-5">
-                <div class="col-md-6 col-lg-3 mb-3">
-                </div>
-                <div class="col-md-6 col-lg-6 mb-3">
-                    <!-- Register -->
-                    <div class="card card-xsm">
-                        <div class="card-body xsm">
-                            <!-- Logo -->
-                            <div class="app-brand justify-content-center">
-                                <img src="<?php echo URL; ?>view/template/assets/img/logos/logo_login.png" alt="logo" width="150">
-                            </div>
-                            <!-- /Logo -->
-                            
-                            <form id="formAuthentication" class="mb-3 mt-5 text-center" action="index.html" method="POST">
-                                <div class="mb-3 text-center" >
-                                <label for="email" class="form-label">Usuario</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="username"
-                                    name="username"
-                                    placeholder="Cuenta institucional"
-                                    autofocus
-                                />
-                                </div>
-                                <div class="mb-3 form-password-toggle text-center">
-                                <div class="justify-content-between text-center">
-                                    <label class="form-label" for="password">Contraseña</label>
-                                </div>
-                                <div class="input-group input-group-merge">
-                                    <input
-                                    type="password"
-                                    id="password"
-                                    class="form-control"
-                                    name="password"
-                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password"
-                                    />
-                                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                                </div>
-                                </div>
-                                
-                                <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="button" name="btn_acceder" id="btn_acceder">Acceder</button>
-                                </div>
-                            </form>
-                            <div id="respLogin"></div>
-                        </div>
+<div class="contenedor-padre">
+    <div class="overlay">
+        <div class="login-form">
+            <img src="<?php echo URL; ?>view/template/assets/img/elements/letras.png" alt="logo" width="200" class="mb-5 logo-login">
+            <h2>Iniciar sesión</h2>
+            <form>
+                <div class="input-group">
+                    <label for="username">Usuario:</label>
+                    <div class="input-group input-group-merge">
+                        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required class="form-control input-login">
                     </div>
-                    <!-- /Register -->
                 </div>
-                <div class="col-md-6 col-lg-3 mb-3">
+                <div class="input-group  form-password-toggle">
+                    <label for="username">Contraseña:</label>
+                    <div class="input-group input-group-merge">
+                        <input
+                        type="password"
+                        id="password"
+                        class="form-control input-login"
+                        name="password"
+                        placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                        aria-describedby="password"
+                        />
+                        <span class="input-group-text cursor-pointer input-login"><i class="bx bx-hide"></i></span>
+                    </div>
                 </div>
-            </div>
-
-            
+                <button type="submit">Ingresar</button>
+            </form>
         </div>
-      </div>
     </div>
+</div>
+
 <script>
     $("#btn_acceder").click(function(){
         var username = $("#username").val();

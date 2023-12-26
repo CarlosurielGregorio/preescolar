@@ -93,6 +93,124 @@
   height: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
+.contenedor-padre{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #d66a21;
+  padding-right: var(--bs-gutter-x, 1.625rem);
+  padding-left: var(--bs-gutter-x, 1.625rem);
+  margin-right: auto;
+  margin-left: auto;
+  overflow: auto;
+  background-image: url('../../../../template/assets/img/backgrounds/bg_preescolar_2.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(214, 106, 33, 0.85); /* Color azul rey con transparencia */
+  overflow: auto;
+}
+
+/* Estilos para el formulario de login */
+.login-form {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: translate(-3%, -22%);
+  text-align: center;
+  color: white;
+  padding: 1rem 5rem;
+  background-color: #c65212 !important;
+  border-radius: 5px;
+}
+
+.login-form h2  {
+  margin-bottom: 20px;
+  color: #ccc !important;
+}
+
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #CCC;
+}
+
+.input-login{
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #CCC;
+}
+
+.input-login:focus{
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #CCC;
+}
+
+.login-form button {
+  
+  padding: 10px 20px;
+  background-color: #002577;
+  color: white;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-text {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  /*transform: translate(-10%, -15%);*/
+  text-align: center;
+  color: white;
+  padding: 1rem 5rem;
+  display: block;
+  max-width: 60% !important;
+}
+
+.login-text h1{
+  margin-bottom: 20px;
+  color: #ccc !important;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-text h2{
+  color: #ccc !important;
+  font-size: 1.3rem;
+}
+
+.login-text p{
+  color: #ccc !important;
+  font-size: 1.15rem;
+}
 @media (max-width: 1199.98px) {
   .app-brand .layout-menu-toggle {
     display: none !important;
